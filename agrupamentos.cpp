@@ -13,6 +13,9 @@ int fatorial(int x){
 }
 
 int main(){
+    // variaveis
+    int n, p, arranjoFinal;
+
     string choise;
     cout << "AR = Arranjo" << endl;
     cout << "PS = Permutacao Simples" << endl;
@@ -22,4 +25,14 @@ int main(){
     cout << "Selecione o tipo de agrupamento: ";
     cin >> choise;
     cout << choise << endl;
+
+    if (choise == "AR"){
+        cout << "Formula -> A(n,p) = n!/(n - p)!" << endl;
+        cout << "Valor do 'n': ";
+        cin >> n;
+        cout << "Valor do 'p': ";
+        cin >> p;
+        arranjoFinal = ((fatorial(n))/(fatorial(n-p)));
+        cout << "Numero de Arranjos Possiveis: " << arranjoFinal << endl;
+    }
 }
