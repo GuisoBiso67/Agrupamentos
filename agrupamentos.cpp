@@ -22,6 +22,8 @@ int main(){
     int n3, numeroDeTermosRepetidos, resultadoDenominador=1, permutacaoElementosRepetidosFinal;
     // permutação circular
     int n4, permutacaoCircularFinal;
+    // combinação
+    int n5, p5, combinacaoFinal;
 
     string choise;
     cout << "AR = Arranjo" << endl;
@@ -72,5 +74,15 @@ int main(){
         cin >> n4;
         permutacaoCircularFinal = fatorial((n4-1));
         cout << "Numero de Permutacoes Possiveis: " << permutacaoCircularFinal << endl;
+    }
+
+    else if(choise == "CO"){
+        cout << "Formula -> C(n,p) = n!/(n-p)! . p!" << endl;
+        cout << "Valor do 'n': ";
+        cin >> n5;
+        cout << "Valor do 'p': ";
+        cin >> p5;
+        combinacaoFinal = ((fatorial(n5))/((fatorial(n5 - p5))*(fatorial(p5))));
+        cout << "Numero de Combinacoes Possiveis: " << combinacaoFinal << endl;
     }
 }
