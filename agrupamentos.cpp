@@ -18,6 +18,8 @@ int main(){
     int n, p, arranjoFinal;
     // permutação simples
     int n2, permutacaoSimplesFinal; 
+    // permutação com elementos repetidos
+    int n3, numeroDeTermosRepetidos, resultadoDenominador=1, permutacaoElementosRepetidosFinal;
 
     string choise;
     cout << "AR = Arranjo" << endl;
@@ -44,5 +46,21 @@ int main(){
         cin >> n2;
         permutacaoSimplesFinal = fatorial(n2);
         cout << "Numero de Permutacoes Possiveis: " << permutacaoSimplesFinal << endl;
+    }
+
+    else if(choise == "PCER"){
+        cout << "Formula -> P(n)(a,b,c...) = n!/a! . b! . c! . ..." << endl;
+        cout << "Numero de Termos que se Repetem: ";
+        cin >> numeroDeTermosRepetidos;
+        int termosRepetidos[numeroDeTermosRepetidos];
+        for (int i=1;i<=numeroDeTermosRepetidos;i++){
+            cout << "Valor " << i << " que se repete: ";
+            cin >> termosRepetidos[i];
+            resultadoDenominador *= fatorial(termosRepetidos[i]);
+        }
+        cout << "Valor do 'n': ";
+        cin >> n3;
+        permutacaoElementosRepetidosFinal = ((fatorial(n3))/(resultadoDenominador));
+        cout << "Numero de Permutacoes Possiveis: " << permutacaoElementosRepetidosFinal << endl;
     }
 }
