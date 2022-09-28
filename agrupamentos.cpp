@@ -20,6 +20,8 @@ int main(){
     int n2, permutacaoSimplesFinal; 
     // permutação com elementos repetidos
     int n3, numeroDeTermosRepetidos, resultadoDenominador=1, permutacaoElementosRepetidosFinal;
+    // permutação circular
+    int n4, permutacaoCircularFinal;
 
     string choise;
     cout << "AR = Arranjo" << endl;
@@ -62,5 +64,13 @@ int main(){
         cin >> n3;
         permutacaoElementosRepetidosFinal = ((fatorial(n3))/(resultadoDenominador));
         cout << "Numero de Permutacoes Possiveis: " << permutacaoElementosRepetidosFinal << endl;
+    }
+
+    else if(choise == "PC"){
+        cout << "Formula -> PC(n) = (n-1)!" << endl;
+        cout << "Valor do 'n': ";
+        cin >> n4;
+        permutacaoCircularFinal = fatorial((n4-1));
+        cout << "Numero de Permutacoes Possiveis: " << permutacaoCircularFinal << endl;
     }
 }
