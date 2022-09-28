@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
+#include <unistd.h>
 
 int fatorial(int x){
     int res;
@@ -85,4 +86,10 @@ int main(){
         combinacaoFinal = ((fatorial(n5))/((fatorial(n5 - p5))*(fatorial(p5))));
         cout << "Numero de Combinacoes Possiveis: " << combinacaoFinal << endl;
     }
+
+    else{
+        cout << "Opcao escolhida nao existe! :)" << endl;
+    }
+    
+    sleep(5);
 }
